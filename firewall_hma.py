@@ -103,13 +103,13 @@ def modeli_hazirla():
 def ip_bilgi_getir(ip_adresi):
      
      if ip_adresi.startswith("192.168.") or ip_adresi.startswith("10.") or ip_adresi.startswith("172.") or ip_adresi == "127.0.0.1":
-          print(f"🏠 [YEREL AĞ TEHDİDİ] -> {ip_adresi} bir yerel ağ adresidir, coğrafi konum sorgusu atlanıyor.")
+          print(f" [YEREL AĞ TEHDİDİ] -> {ip_adresi} bir yerel ağ adresidir, coğrafi konum sorgusu atlanıyor.")
           
          
          
           return
 
-     print(f"🔍 {ip_adresi} için dnschecker.org üzerinden coğrafi konum bilgileri sorgulanıyor...")
+     print(f" {ip_adresi} için dnschecker.org üzerinden coğrafi konum bilgileri sorgulanıyor...")
      try:
           url = f"https://dnschecker.org/ip-location.php?ip={ip_adresi}"
           headers = {
