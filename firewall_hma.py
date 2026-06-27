@@ -195,6 +195,10 @@ def paket_isleyici(paket):
       
         if kaynak_ip.startswith("192.168.") or kaynak_ip.startswith("10.") or kaynak_ip == "127.0.0.1":
             return
+        hostname = socket.gethostname()
+        local_ip = socket.gethostbyname(hostname)
+        if kaynak_ip == local_ip:
+             return
         hedef_port = 0
         proto = "Diğer"
         
